@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Basic document information -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <title>Contact Us | DriveEasy Rentals</title>
-
-    <!-- Link to the shared stylesheet -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DriveEasy Rentals | Contact</title>
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
 
@@ -17,95 +13,81 @@
       <a class="logo" href="../index.html">DriveEasy Rentals</a>
 
       <!-- Main navigation -->
-      <nav aria-label="Main navigation">
-        <a href="../index.html">Home</a>
-        <a href="cars.html">Cars</a>
-        <a href="booking.html">Book a Car</a>
-        <a href="locations.html">Locations</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact</a>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="cars.html">Our Cars</a></li>
+          <li><a href="booking.html">Book a Car</a></li>
+          <li><a href="locations.html">Locations</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
       </nav>
     </header>
 
     <main>
-      <!-- Page introduction -->
+      <!-- Contact introduction -->
       <section class="page-intro">
         <p class="eyebrow">We are here to help</p>
-        <h1>Contact DriveEasy Rentals</h1>
-        <p>
-          Have a question? Contact our team and we will be happy to assist you.
-        </p>
+        <h1>Contact Us</h1>
+        <p>Have a question? Send us a message or contact our office.</p>
       </section>
 
       <!-- Contact information -->
       <section class="contact-section">
-        <h2>Contact Information</h2>
-
         <div class="contact-grid">
           <article class="contact-card">
-            <h3>Call Us</h3>
-            <p>
-              <a href="tel:+18005550199">(800) 555-0199</a>
-            </p>
-            <p>Monday–Sunday, 7:00 AM–9:00 PM</p>
+            <h2>Phone</h2>
+            <p><a href="tel:+18005550199">(800) 555-0199</a></p>
           </article>
 
           <article class="contact-card">
-            <h3>Email Us</h3>
+            <h2>Email</h2>
             <p>
               <a href="mailto:help@driveeasy.example">
                 help@driveeasy.example
               </a>
             </p>
-            <p>We usually respond within one business day.</p>
           </article>
 
           <article class="contact-card">
-            <h3>Head Office</h3>
-            <p>222 Sunset Boulevard</p>
-            <p>Los Angeles, CA 90028</p>
+            <h2>Office Hours</h2>
+            <p>Monday–Sunday</p>
+            <p>7:00 AM–9:00 PM</p>
           </article>
         </div>
       </section>
 
       <!-- Contact form -->
       <section class="contact-section">
-        <h2>Send Us a Message</h2>
-
         <form class="contact-form">
-          <label for="name">Full name:</label>
+          <label for="name">Full name</label>
           <input
+            type="text"
             id="name"
             name="name"
-            type="text"
             placeholder="Enter your name"
+            required
           />
 
-          <label for="email">Email address:</label>
+          <label for="email">Email address</label>
           <input
+            type="email"
             id="email"
             name="email"
-            type="email"
-            placeholder="you@example.com"
+            placeholder="Enter your email"
+            required
           />
 
-          <label for="subject">Subject:</label>
-          <input
-            id="subject"
-            name="subject"
-            type="text"
-            placeholder="How can we help?"
-          />
-
-          <label for="message">Message:</label>
+          <label for="message">Message</label>
           <textarea
             id="message"
             name="message"
-            rows="6"
-            placeholder="Write your message here"
+            placeholder="Write your message"
+            required
           ></textarea>
 
-          <button type="submit">Send Message</button>
+          <button class="button" type="submit">Send Message</button>
         </form>
       </section>
     </main>
@@ -113,7 +95,6 @@
     <!-- Website footer -->
     <footer class="site-footer">
       <p>&copy; 2026 DriveEasy Rentals. All rights reserved.</p>
-      <a href="contact.html">Contact us</a>
     </footer>
   </body>
 </html>

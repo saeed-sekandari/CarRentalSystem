@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Basic document information -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <title>Book a Car | DriveEasy Rentals</title>
-
-    <!-- The CSS file is one folder above the pages folder -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DriveEasy Rentals | Book a Car</title>
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
 
@@ -17,157 +13,101 @@
       <a class="logo" href="../index.html">DriveEasy Rentals</a>
 
       <!-- Main navigation -->
-      <nav aria-label="Main navigation">
-        <a href="../index.html">Home</a>
-        <a href="cars.html">Cars</a>
-        <a href="booking.html">Book a Car</a>
-        <a href="locations.html">Locations</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact</a>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="cars.html">Our Cars</a></li>
+          <li><a href="booking.html">Book a Car</a></li>
+          <li><a href="locations.html">Locations</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
       </nav>
     </header>
 
     <main>
-      <!-- Booking page introduction -->
+      <!-- Booking introduction -->
       <section class="page-intro">
         <p class="eyebrow">Reserve your vehicle</p>
-        <h1>Book your rental car</h1>
-        <p>
-          Complete the form below to request your vehicle reservation.
-        </p>
+        <h1>Book a Car</h1>
+        <p>Complete the form below to request your rental vehicle.</p>
       </section>
 
-      <!-- Main booking form -->
+      <!-- Booking form -->
       <section class="booking-section">
         <form class="booking-form">
-          <h2>Rental Information</h2>
-
-          <!-- The label element describes the car selection field -->
-          <label for="car-type">Choose a car:</label>
-
-          <!-- The select element creates a dropdown menu -->
-          <select id="car-type" name="car-type">
-            <option value="toyota-corolla">
-              Toyota Corolla - Economy
-            </option>
-            <option value="toyota-rav4">
-              Toyota RAV4 - SUV
-            </option>
-            <option value="bmw-5-series">
-              BMW 5 Series - Luxury
-            </option>
-            <option value="ford-mustang">
-              Ford Mustang - Sports
-            </option>
-            <option value="tesla-model-3">
-              Tesla Model 3 - Electric
-            </option>
-            <option value="honda-odyssey">
-              Honda Odyssey - Van
-            </option>
+          <label for="car-type">Choose a car</label>
+          <select id="car-type" name="car-type" required>
+            <option value="">Select a vehicle</option>
+            <option value="economy">Economy Car</option>
+            <option value="suv">SUV</option>
+            <option value="luxury">Luxury Car</option>
+            <option value="sports">Sports Car</option>
+            <option value="electric">Electric Car</option>
+            <option value="van">Van or Truck</option>
           </select>
 
-          <!-- The label element identifies the pickup location field -->
-          <label for="pickup-location">Pickup location:</label>
-
-          <!-- The select element lets the customer choose a location -->
-          <select id="pickup-location" name="pickup-location">
+          <label for="pickup-location">Pickup location</label>
+          <select id="pickup-location" name="pickup-location" required>
+            <option value="">Select a location</option>
             <option value="los-angeles">Los Angeles</option>
             <option value="san-diego">San Diego</option>
             <option value="san-francisco">San Francisco</option>
             <option value="las-vegas">Las Vegas</option>
           </select>
 
-          <!-- The label element identifies the return location field -->
-          <label for="return-location">Return location:</label>
+          <label for="pickup-date">Pickup date</label>
+          <input type="date" id="pickup-date" name="pickup-date" required />
 
-          <select id="return-location" name="return-location">
-            <option value="los-angeles">Los Angeles</option>
-            <option value="san-diego">San Diego</option>
-            <option value="san-francisco">San Francisco</option>
-            <option value="las-vegas">Las Vegas</option>
-          </select>
+          <label for="return-date">Return date</label>
+          <input type="date" id="return-date" name="return-date" required />
 
-          <!-- The label element identifies the pickup date field -->
-          <label for="pickup-date">Pickup date:</label>
-
+          <label for="rental-days">Number of rental days</label>
           <input
-            id="pickup-date"
-            name="pickup-date"
-            type="date"
-          />
-
-          <!-- The label element identifies the return date field -->
-          <label for="return-date">Return date:</label>
-
-          <input
-            id="return-date"
-            name="return-date"
-            type="date"
-          />
-
-          <!-- The label element identifies the rental duration field -->
-          <label for="rental-days">Number of rental days:</label>
-
-          <!-- The min attribute prevents fewer than one rental day -->
-          <input
+            type="number"
             id="rental-days"
             name="rental-days"
-            type="number"
             min="1"
-            placeholder="Enter number of days"
+            required
           />
 
-          <h2>Customer Information</h2>
-
-          <!-- The label element identifies the customer name field -->
-          <label for="customer-name">Full name:</label>
-
+          <label for="customer-name">Full name</label>
           <input
+            type="text"
             id="customer-name"
             name="customer-name"
-            type="text"
             placeholder="Enter your full name"
+            required
           />
 
-          <!-- The label element identifies the phone field -->
-          <label for="phone">Phone number:</label>
-
-          <!-- The inputmode attribute suggests a phone keyboard on mobile devices -->
+          <label for="phone">Phone number</label>
           <input
+            type="tel"
             id="phone"
             name="phone"
-            type="tel"
             inputmode="tel"
-            placeholder="555-123-4567"
+            placeholder="555-555-5555"
+            required
           />
 
-          <!-- The label element identifies the license plate field -->
-          <label for="license-plate">License plate:</label>
-
-          <!-- The pattern attribute checks the license plate format -->
+          <label for="license-plate">License plate</label>
           <input
+            type="text"
             id="license-plate"
             name="license-plate"
-            type="text"
-            pattern="[A-Z0-9-]+"
-            title="Use uppercase letters, numbers, and hyphens"
+            pattern="[A-Za-z0-9-]+"
             placeholder="ABC-1234"
+            required
           />
 
-          <!-- The label element identifies the special requests field -->
-          <label for="special-requests">Special requests:</label>
-
-          <!-- The textarea element allows multiple lines of text -->
+          <label for="requests">Special requests</label>
           <textarea
-            id="special-requests"
-            name="special-requests"
-            rows="5"
-            placeholder="Enter any special requests"
+            id="requests"
+            name="requests"
+            placeholder="Add any special requests"
           ></textarea>
 
-          <!-- Form submission button -->
-          <button type="submit">Submit Booking Request</button>
+          <button class="button" type="submit">Submit Booking Request</button>
         </form>
       </section>
     </main>
@@ -175,7 +115,6 @@
     <!-- Website footer -->
     <footer class="site-footer">
       <p>&copy; 2026 DriveEasy Rentals. All rights reserved.</p>
-      <a href="contact.html">Contact us</a>
     </footer>
   </body>
 </html>

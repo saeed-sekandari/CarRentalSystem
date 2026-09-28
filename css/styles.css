@@ -1,0 +1,300 @@
+/* Basic page styles */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #1e293b;
+  background-color: #f8fafc;
+}
+
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Header */
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.25rem 6%;
+  background-color: #0f172a;
+  color: white;
+}
+
+.logo {
+  color: white;
+  font-size: 1.6rem;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* Navigation */
+
+.site-header nav ul {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-header nav a {
+  color: white;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.site-header nav a:hover {
+  color: #93c5fd;
+  text-decoration: none;
+}
+
+/* Main content */
+
+main {
+  width: min(1100px, 90%);
+  margin: 0 auto;
+}
+
+.hero {
+  padding: 5rem 1rem;
+  text-align: center;
+  background-color: #dbeafe;
+}
+
+.hero-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  color: #2563eb;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.page-intro {
+  padding: 3rem 0 2rem;
+  text-align: center;
+}
+
+.page-intro h1,
+.hero h1 {
+  color: #0f172a;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+section h2 {
+  color: #0f172a;
+  margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+
+.button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.4rem;
+  background-color: #2563eb;
+  color: white;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #1d4ed8;
+  text-decoration: none;
+}
+
+/* Sections */
+
+.categories,
+.car-category,
+.locations-section,
+.contact-section,
+.booking-section,
+.content-section {
+  padding: 3rem 0;
+}
+
+/* Card layouts */
+
+.category-grid,
+.car-grid,
+.location-grid,
+.benefits-grid,
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.category-card,
+.car-card,
+.location-card,
+.benefit-card,
+.contact-card {
+  padding: 1.5rem;
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.6rem;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+}
+
+.category-card:hover,
+.car-card:hover,
+.location-card:hover {
+  transform: translateY(-4px);
+  transition: 0.2s ease;
+}
+
+/* Car cards */
+
+.car-category {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.car-card h3 {
+  margin-top: 0;
+  color: #0f172a;
+}
+
+.price {
+  color: #2563eb;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* Forms */
+
+.booking-form,
+.contact-form {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 0.6rem;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+}
+
+.booking-form label,
+.contact-form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea,
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-top: 0.4rem;
+  padding: 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.35rem;
+  font: inherit;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus,
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid #93c5fd;
+  border-color: #2563eb;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Call-to-action area */
+
+.call-to-action {
+  margin: 3rem 0;
+  padding: 3rem 1rem;
+  text-align: center;
+  background-color: #dbeafe;
+  border-radius: 0.6rem;
+}
+
+/* Footer */
+
+.site-footer {
+  margin-top: 3rem;
+  padding: 2rem 6%;
+  background-color: #0f172a;
+  color: white;
+  text-align: center;
+}
+
+.site-footer a {
+  color: #93c5fd;
+}
+
+/* Tablet screen */
+
+@media (max-width: 800px) {
+  .category-grid,
+  .car-grid,
+  .location-grid,
+  .benefits-grid,
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Phone screen */
+
+@media (max-width: 550px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .site-header nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7rem;
+  }
+
+  .category-grid,
+  .car-grid,
+  .location-grid,
+  .benefits-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-intro h1,
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero {
+    padding: 3rem 1rem;
+  }
+}
