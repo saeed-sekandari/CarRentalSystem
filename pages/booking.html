@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>DriveEasy Rentals | Book a Car</title>
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
@@ -36,7 +39,14 @@
       <!-- Booking form -->
       <section class="booking-section">
         <form class="booking-form">
+          <!-- UNIQUE ELEMENT: label
+               Explanation: Identifies each form field and improves accessibility. -->
+
           <label for="car-type">Choose a car</label>
+
+          <!-- UNIQUE ELEMENT: select
+               Explanation: Creates a dropdown menu so users can choose one option. -->
+
           <select id="car-type" name="car-type" required>
             <option value="">Select a vehicle</option>
             <option value="economy">Economy Car</option>
@@ -47,8 +57,15 @@
             <option value="van">Van or Truck</option>
           </select>
 
+          <!-- The label and select elements are also used for pickup location. -->
+
           <label for="pickup-location">Pickup location</label>
-          <select id="pickup-location" name="pickup-location" required>
+
+          <select
+            id="pickup-location"
+            name="pickup-location"
+            required
+          >
             <option value="">Select a location</option>
             <option value="los-angeles">Los Angeles</option>
             <option value="san-diego">San Diego</option>
@@ -57,12 +74,26 @@
           </select>
 
           <label for="pickup-date">Pickup date</label>
-          <input type="date" id="pickup-date" name="pickup-date" required />
+          <input
+            type="date"
+            id="pickup-date"
+            name="pickup-date"
+            required
+          />
 
           <label for="return-date">Return date</label>
-          <input type="date" id="return-date" name="return-date" required />
+          <input
+            type="date"
+            id="return-date"
+            name="return-date"
+            required
+          />
 
           <label for="rental-days">Number of rental days</label>
+
+          <!-- UNIQUE ATTRIBUTE: min
+               Explanation: Prevents the user from entering fewer than one day. -->
+
           <input
             type="number"
             id="rental-days"
@@ -81,6 +112,10 @@
           />
 
           <label for="phone">Phone number</label>
+
+          <!-- UNIQUE ATTRIBUTE: inputmode
+               Explanation: Helps mobile devices display a phone-friendly keyboard. -->
+
           <input
             type="tel"
             id="phone"
@@ -91,6 +126,11 @@
           />
 
           <label for="license-plate">License plate</label>
+
+          <!-- UNIQUE ATTRIBUTE: pattern
+               Explanation: Controls the format of the license plate input.
+               Letters, numbers, and hyphens are allowed. -->
+
           <input
             type="text"
             id="license-plate"
@@ -101,13 +141,19 @@
           />
 
           <label for="requests">Special requests</label>
+
+          <!-- UNIQUE ELEMENT: textarea
+               Explanation: Gives users a larger area to type special requests. -->
+
           <textarea
             id="requests"
             name="requests"
             placeholder="Add any special requests"
           ></textarea>
 
-          <button class="button" type="submit">Submit Booking Request</button>
+          <button class="button" type="submit">
+            Submit Booking Request
+          </button>
         </form>
       </section>
     </main>
