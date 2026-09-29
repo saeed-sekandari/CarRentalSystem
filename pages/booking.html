@@ -40,7 +40,7 @@
       <section class="booking-section">
         <form class="booking-form">
           <!-- UNIQUE ELEMENT: label
-               Explanation: Identifies each form field and improves accessibility. -->
+               Explanation: Provides a visible text description for the user input control -->
 
           <label for="car-type">Choose a car</label>
 
@@ -116,7 +116,7 @@
           <label for="rental-days">Number of rental days</label>
 
           <!-- UNIQUE ATTRIBUTE: min
-               Explanation: Prevents the user from entering fewer than one day. -->
+               Explanation: It sets the smallest number the user is allowed to enter. -->
 
           <input
             type="number"
@@ -138,7 +138,7 @@
           <label for="phone">Phone number</label>
 
           <!-- UNIQUE ATTRIBUTE: inputmode
-               Explanation: Helps mobile devices display a phone-friendly keyboard. -->
+               Explanation: Helps mobile devices display a phone-friendly keyboard like numbers and symbols. -->
 
           <input
             type="tel"
@@ -152,7 +152,7 @@
           <label for="license-plate">License plate</label>
 
           <!-- UNIQUE ATTRIBUTE: pattern
-               Explanation: Controls the format of the license plate input.
+               Explanation: Controls the format of the license plate(Validate user input).
                Letters, numbers, and hyphens are allowed. -->
 
           <input
@@ -167,7 +167,8 @@
           <label for="requests">Special requests</label>
 
           <!-- UNIQUE ELEMENT: textarea
-               Explanation: Gives users a larger area to type special requests. -->
+               Explanation: Gives users a larger area or mutltiline text input to type special requests
+               , comments and reviews. -->
 
           <textarea
             id="requests"
