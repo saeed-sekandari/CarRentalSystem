@@ -49,12 +49,19 @@
 
           <select id="car-type" name="car-type" required>
             <option value="">Select a vehicle</option>
-            <option value="economy">Economy Car</option>
-            <option value="suv">SUV</option>
-            <option value="luxury">Luxury Car</option>
-            <option value="sports">Sports Car</option>
-            <option value="electric">Electric Car</option>
-            <option value="van">Van or Truck</option>
+            <option value="toyota-corolla">Toyota Corolla</option>
+            <option value="honda-civic">Honda Civic</option>
+            <option value="hyundai-elantra">Hyundai Elantra</option>
+            <option value="honda-cr-v">Honda CR-V</option>
+            <option value="ford-explorer">Ford Explorer</option>
+            <option value="bmw-5-series">BMW 5 Series</option>
+            <option value="mercedes-e-class">Mercedes E-Class</option>
+            <option value="ford-mustang">Ford Mustang</option>
+            <option value="chevrolet-corvette">Chevrolet Corvette</option>
+            <option value="tesla-model-3">Tesla Model 3</option>
+            <option value="tesla-model-y">Tesla Model Y</option>
+            <option value="honda-odyssey">Honda Odyssey</option>
+            <option value="ford-f-150">Ford F-150</option>
           </select>
 
           <!-- The label and select elements are also used for pickup location. -->
@@ -67,6 +74,23 @@
             required
           >
             <option value="">Select a location</option>
+            <option value="los-angeles">Los Angeles</option>
+            <option value="san-diego">San Diego</option>
+            <option value="san-francisco">San Francisco</option>
+            <option value="las-vegas">Las Vegas</option>
+          </select>
+
+          <!-- Return location allows the customer to return the car
+               to a different location from the pickup location. -->
+
+          <label for="return-location">Return location</label>
+
+          <select
+            id="return-location"
+            name="return-location"
+            required
+          >
+            <option value="">Select a return location</option>
             <option value="los-angeles">Los Angeles</option>
             <option value="san-diego">San Diego</option>
             <option value="san-francisco">San Francisco</option>
